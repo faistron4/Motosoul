@@ -26,4 +26,6 @@ export type Tool = {
   slug: string;
   title: string;
   description: string;
+  icon: string;
+  category: string;
 };
