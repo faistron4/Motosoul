@@ -63,7 +63,7 @@ export default function Footer() {
                 <i className="fa-solid fa-gauge-high text-white text-sm" />
               </div>
               <span className="text-lg font-black text-slate-900 tracking-tight">
-                Motoristo
+                Motosoul
               </span>
             </Link>
 
@@ -124,7 +124,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <p className="text-xs text-slate-400 text-center sm:text-left">
-              © {new Date().getFullYear()} Motoristo. All rights reserved.
+              © {new Date().getFullYear()} Motosoul. All rights reserved.
             </p>
 
             {/* Small links */}

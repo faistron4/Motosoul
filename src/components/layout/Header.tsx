@@ -28,7 +28,7 @@ export default function Header() {
               <i className="fa-solid fa-gauge-high text-white text-sm" />
             </div>
             <span className="text-lg font-black text-slate-900 tracking-tight">
-              Motoristo
+              Motosoul
             </span>
           </Link>
 
