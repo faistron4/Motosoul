@@ -1,0 +1,108 @@
+# ============================================================
+# Sveltia CMS Configuration — Motosoul Blog
+# ============================================================
+
+backend:
+  name: github
+  repo: faistron4/Motosoul   # ← YAHAN APNA REPO LIKHO
+  branch: main
+  auth_methods: [token]
+  # OAuth ke liye base_url (neeche setup guide me detail hai)
+  # base_url: https://sveltia-cms-auth.YOUR_SUBDOMAIN.workers.dev
+
+# ============================================================
+# MEDIA / IMAGE STORAGE
+# ============================================================
+media_folder: public/uploads          # Actual file system path
+public_folder: /uploads               # Public URL path
+
+# ============================================================
+# EDITORIAL WORKFLOW (draft → review → publish)
+# ============================================================
+publish_mode: editorial_workflow
+
+# ============================================================
+# GLOBAL SLUG CONFIG
+# ============================================================
+slug:
+  encoding: unicode
+  clean_accents: true
+
+# ============================================================
+# COLLECTIONS
+# ============================================================
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: content/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{fields.slug}}"
+    sortable_fields: [publishedAt, title]
+    fields:
+      # ---------- BASIC ----------
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string, hint: "URL-friendly name" }
+      - { name: excerpt, label: Excerpt, widget: text, hint: "Short summary for cards" }
+      - { name: coverImage, label: Cover Image, widget: image, required: false }
+      - { name: category, label: Category, widget: select,
+          options: [Car Culture, Motorsport, Engineering, History, Road Trips, Ownership] }
+      - { name: tags, label: Tags, widget: list, required: false,
+          field: { name: tag, label: Tag, widget: string } }
+      - { name: author, label: Author, widget: string, default: "Motosoul Team" }
+      - { name: publishedAt, label: Published Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: featured, label: Featured Post, widget: boolean, default: false }
+      - { name: draft, label: Draft, widget: boolean, default: true }
+
+      # ---------- SEO (collapsible group) ----------
+           # ---------- SEO (collapsible group) ----------
+      - name: seo
+        label: SEO Settings
+        widget: object
+        collapsed: true
+        summary: "{{fields.metaTitle}}"
+        fields:
+          - { name: metaTitle, label: Meta Title, widget: string, required: false,
+              hint: "Google me dikhne wala title. 50-60 chars ideal." }
+          - { name: metaDescription, label: Meta Description, widget: text, required: false,
+              hint: "Google me dikhne wali description. 150-160 chars ideal." }
+          - { name: focusKeyword, label: Focus Keyword, widget: string, required: false,
+              hint: "Primary keyword jispe rank karna hai" }
+          - { name: keywords, label: Keywords, widget: list, required: false,
+              hint: "Multiple SEO keywords",
+              field: { name: keyword, label: Keyword, widget: string } }
+          - { name: ogImage, label: Open Graph Image, widget: image, required: false,
+              hint: "Social share image. 1200x630 recommended." }
+          - { name: twitterCard, label: Twitter Card Type, widget: select,
+              options: [summary, summary_large_image], default: summary_large_image }
+          - { name: schemaType, label: Schema Type, widget: select,
+              options: [BlogPosting, Article, HowTo, Review, NewsArticle], default: BlogPosting }
+          - { name: canonicalUrl, label: Canonical URL, widget: string, required: false,
+              hint: "Agar content kahi aur bhi publish hua ho tabhi bharo" }
+          - { name: noindex, label: Hide from Search Engines, widget: boolean, default: false,
+              hint: "Post ko Google me hide karna ho to enable karo" }
+          - { name: priority, label: Sitemap Priority, widget: number,
+              value_type: float, min: 0.0, max: 1.0, step: 0.1, default: 0.8,
+              hint: "Sitemap me importance (0.0 to 1.0)" }
+          - { name: changeFrequency, label: Change Frequency, widget: select,
+              options: [always, hourly, daily, weekly, monthly, yearly, never],
+              default: monthly }
+
+      # ---------- BODY ----------
+      - { name: body, label: Content, widget: richtext }
+
+  # ---------- SITE SETTINGS (Singleton) ----------
+  - name: settings
+    label: Site Settings
+    files:
+      - name: general
+        label: General Settings
+        file: content/settings/general.json
+        fields:
+          - { name: siteTitle, label: Site Title, widget: string, default: "Motosoul" }
+          - { name: siteDescription, label: Site Description, widget: text }
+          - { name: contactEmail, label: Contact Email, widget: string }
+          - { name: socialTwitter, label: Twitter URL, widget: string, required: false }
+          - { name: socialInstagram, label: Instagram URL, widget: string, required: false }
+          - { name: socialYoutube, label: YouTube URL, widget: string, required: false }
