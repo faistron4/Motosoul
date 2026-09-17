@@ -1,4 +1,4 @@
-# Motoristo Clone – Frontend (Next.js + TypeScript, App Router)
+# Motosoul – Frontend (Next.js + TypeScript, App Router)
 
 Yeh sirf **frontend** scaffold hai. Backend baad me alag se add hoga
 (data/*.ts files me abhi dummy/static data hai — jab API/backend ready ho

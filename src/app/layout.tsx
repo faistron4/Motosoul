@@ -5,8 +5,8 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Motoristo Clone",
-    template: "%s | Motoristo Clone",
+    default: "Motosoul",
+    template: "%s | Motosoul",
   },
   description: "Motoring features, guides, circuits aur tools for car enthusiasts.",
 };

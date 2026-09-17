@@ -6,15 +6,15 @@ import BackToTopButton from '@/components/shared/BackToTopButton';
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description:
-    'Read the terms and conditions for using Motoristo. Understand your rights and responsibilities when accessing our website, tools, and community features.',
+    'Read the terms and conditions for using Motosoul. Understand your rights and responsibilities when accessing our website, tools, and community features.',
   alternates: {
     canonical: 'https://example.com/terms-and-conditions',
   },
   openGraph: {
     type: 'website',
-    title: 'Terms & Conditions | Motoristo',
+    title: 'Terms & Conditions | Motosoul',
     description:
-      'Read the terms and conditions for using Motoristo. Understand your rights and responsibilities.',
+      'Read the terms and conditions for using Motosoul. Understand your rights and responsibilities.',
     images: ['https://placehold.co/1200x630/0f172a/ffffff?text=Terms+%26+Conditions'],
   },
 };
@@ -41,7 +41,7 @@ export default function TermsPage() {
             </h1>
 
             <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-2xl">
-              These terms set out the rules for using Motoristo. By accessing or using
+              These terms set out the rules for using Motosoul. By accessing or using
               our website, tools, or community features, you agree to be bound by them.
               Please read them carefully.
             </p>
@@ -87,8 +87,8 @@ export default function TermsPage() {
                 <span className="text-blue-600">1.</span> Introduction
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                Welcome to Motoristo. These Terms &amp; Conditions (&quot;Terms&quot;)
-                govern your access to and use of the Motoristo website, mobile
+                Welcome to Motosoul. These Terms &amp; Conditions (&quot;Terms&quot;)
+                govern your access to and use of the Motosoul website, mobile
                 applications, tools, and any related services (collectively, the
                 &quot;Platform&quot;).
               </p>
@@ -170,7 +170,7 @@ export default function TermsPage() {
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
                 All content on the Platform—including design, text, graphics, logos,
-                icons, and software—is owned by Motoristo or its licensors and is
+                icons, and software—is owned by Motosoul or its licensors and is
                 protected by copyright, trademark, and other intellectual property laws.
               </p>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -261,7 +261,7 @@ export default function TermsPage() {
                 <span className="text-blue-600">10.</span> Limitation of Liability
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                To the fullest extent permitted by law, Motoristo and its directors,
+                To the fullest extent permitted by law, Motosoul and its directors,
                 employees, and partners shall not be liable for any indirect,
                 incidental, or consequential loss or damage arising from your use of,
                 or inability to use, the Platform.

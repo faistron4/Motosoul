@@ -58,6 +58,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        
       </section>
 
       {/* ==================================================== */}
@@ -269,7 +270,7 @@ export default function HomePage() {
             <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-5">
               <i className="fa-solid fa-mobile-screen-button text-xl text-white" />
             </div>
-            <h3 className="text-2xl font-black text-white mb-3">Take Motoristo Everywhere</h3>
+            <h3 className="text-2xl font-black text-white mb-3">Take Motosoul Everywhere</h3>
             <p className="text-blue-100 text-sm leading-relaxed mb-6 max-w-sm">
               All our tools and calculators, now in your pocket. Available on iOS and Android.
             </p>
